@@ -185,7 +185,7 @@ p {
 }
 
 .hero h1 em {
-  color: var(--accent);
+  color: red;
   font-style: normal;
 }
 
