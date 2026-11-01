@@ -88,12 +88,8 @@ p {
 .brand-mark {
   width: 55px;
   height: 55px;
-  border: 1px solid rgba(255, 255, 255, .25);
   border-radius: 50%;
   display: grid;
-  place-items: center;
-  font: 800 22px "Manrope";
-  color: var(--accent);
 }
 
 .nav-link {
@@ -1472,12 +1468,67 @@ p {
   font-size: 11px;
   opacity: 0.65;
 }
-.f-button{
+
+.f-button {
   left: 0;
 }
 
+/* ================================
+   SAGUN TRUSTED CLIENTS SECTION
+================================ */
+
+.sagun-clients-section {
+  padding: 85px 0;
+  background: #f7f9fc;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.sagun-clients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.sagun-client-card {
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #e9edf3;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease;
+}
+
+.sagun-client-card img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: contain;
+  transition: all 0.35s ease;
+}
+
+.sagun-client-card:hover {
+  transform: translateY(-6px);
+  border-color: #e85d24;
+  box-shadow: 0 12px 30px rgba(23, 35, 56, 0.08);
+}
+
+.sagun-client-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Responsive */
+
 
 @media (max-width: 991px) {
+  .sagun-clients-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .sagun-facility-section {
     padding: 80px 0;
   }
@@ -1497,6 +1548,20 @@ p {
 }
 
 @media (max-width: 575px) {
+  .sagun-clients-section {
+    padding: 60px 0;
+  }
+
+
+  .sagun-clients-grid {
+    gap: 15px;
+  }
+
+  .sagun-client-card {
+    padding: 20px;
+  }
+
+
   .sagun-facility-caption {
     display: none;
   }
